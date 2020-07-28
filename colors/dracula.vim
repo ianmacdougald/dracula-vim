@@ -151,6 +151,7 @@ call s:h('DraculaSubtle', s:subtle)
 
 call s:h('DraculaCyan', s:cyan)
 call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
+call s:h('DraculaCyanBold', s:cyan, s:none, [s:attrs.bold])
 
 call s:h('DraculaGreen', s:green)
 call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
@@ -280,7 +281,7 @@ hi! link Number Constant
 hi! link Boolean Constant
 hi! link Float Constant
 
-hi! link Identifier DraculaFg
+hi! link Identifier DraculaCyanBold
 hi! link Function DraculaGreen
 
 hi! link Statement DraculaPink
@@ -301,7 +302,6 @@ hi! link Structure DraculaPink
 hi! link Typedef DraculaPink
 
 hi! link Type DraculaCyanItalic
-
 hi! link Delimiter DraculaFg
 
 hi! link Special DraculaPink
