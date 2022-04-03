@@ -197,9 +197,9 @@ call s:h('DraculaDiffDelete', s:red, s:bgdark)
 " }}}
 " User Interface: {{{
 
-set background=dark
+"set background=dark
 
-" Required as some plugins will overwrite
+"Required as some plugins will overwrite
 call s:h('Normal', s:fg, g:dracula_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
@@ -207,6 +207,8 @@ call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
+
+highlight Normal ctermbg=black
 
 hi! link ColorColumn  DraculaBgDark
 hi! link CursorColumn CursorLine
@@ -274,12 +276,13 @@ hi! link SpellLocal DraculaWarnLine
 hi! link SpellCap DraculaInfoLine
 hi! link SpellRare DraculaInfoLine
 
-hi! link Constant DraculaPurple
+hi! link Constant DraculaGreen
 hi! link String DraculaYellow
-hi! link Character DraculaPink
-hi! link Number Constant
-hi! link Boolean Constant
-hi! link Float Constant
+hi! link Character DraculaYellow
+hi! link Number DraculaPurple
+hi! link Boolean DraculaRed
+
+hi! link Float DraculaPurple
 
 hi! link Identifier DraculaCyanBold
 hi! link Function DraculaGreen
@@ -301,7 +304,7 @@ hi! link StorageClass DraculaPink
 hi! link Structure DraculaPink
 hi! link Typedef DraculaPink
 
-hi! link Type DraculaCyanItalic
+hi! link Type DraculaPink
 hi! link Delimiter DraculaFg
 
 hi! link Special DraculaPink
